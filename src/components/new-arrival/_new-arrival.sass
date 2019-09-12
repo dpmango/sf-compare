@@ -40,8 +40,6 @@
 .new-arrival-slider
   padding-bottom: 57px
   .swiper-slide
-    width: 251px
-    margin-right: 65px
     &:last-child
       margin-right: 0
 
@@ -61,15 +59,29 @@
     opacity: 1
     transition: opacity $delay
 
+@include media-breakpoint-down(lg)
+  .new-arrival-slider
+    overflow: visible
+
 @include media-breakpoint-down(md)
   .new-arrival-tab-link li
     margin-right: 50px
 
 @include media-breakpoint-down(sm)
   .new-arrival-tab-link
+    position: relative
+    top: -20px
     margin-bottom: 20px
     li button
       bottom: -27px
       font-size: 20px
-  .new-arrival-tab-link li button:before
-    top: calc(100% + 5px)
+  .new-arrival-tab-link li button
+    font-size: 12px
+    &:before
+      top: calc(-100% + -0px)
+  .new-arrival-tab-link li.active button:before
+    width: 5px
+    height: 5px
+  .new-arrival-tab-link li
+    margin-right: 20px
+

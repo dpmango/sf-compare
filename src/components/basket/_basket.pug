@@ -5,7 +5,7 @@ section.indent-t20.indent-b100
         h1.h1-title Корзина
     .row
       .col
-        form.basket-wrap
+        form.basket-wrap(js-validate-form)
           .wrap-products
             .products
               .products__item
@@ -46,22 +46,22 @@ section.indent-t20.indent-b100
             .checkout__title Оформление заказа
             .input
               label Имя
-              input(type="text")
+              input(type="text" required)
             .checkout__wrap
               .checkout__half
                 .input
                   label Телефон
-                  input(type="text")
+                  input(type="tel" required)
               .checkout__half
                 .input
                   label Email
-                  input(type="text")
+                  input(type="text" required)
             .input
               label Город
-              input(type="text")
+              input(type="text" required)
             .input
               label Адрес
-              input(type="text")
+              input(type="text" required)
             .input
               label Комментарий
               textarea

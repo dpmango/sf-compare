@@ -1,6 +1,7 @@
 // UI
 
 .input
+  position: relative
   display: flex
   flex-direction: column
   label
@@ -31,6 +32,12 @@
     letter-spacing: 0.03em
     font-weight: 400
     color: #000
+
+.error.ui-input__validation
+  position: absolute
+  top: 100%
+  font-size: 14px
+  color: red
 
 // WORKS KIND OF bootstrap - group have label and input
 // .ui-group

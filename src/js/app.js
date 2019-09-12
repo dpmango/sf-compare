@@ -88,6 +88,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Components.new_arrival.init();
       APP.Components.basket.init();
       APP.Components.footer.init();
+      APP.Components.catalog.init();
     };
 
     return app;

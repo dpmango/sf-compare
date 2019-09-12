@@ -28,13 +28,56 @@
     initSwipers: function () {
       // EXAMPLE SWIPER
       new Swiper('[js-slider]', {
-        slidesPerView: 'auto',
+        slidesPerView: 4,
+        spaceBetween: 65,
         touchEventsTarget: 'wrapper',
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
           clickable: true
         },
+        breakpoints: {
+          1299: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 45,
+          },
+          767: {
+            slidesPerView: 2,
+            spaceBetween: 45,
+          },
+          500: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        }
+      });
+      new Swiper('[js-slider2]', {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        touchEventsTarget: 'wrapper',
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        breakpoints: {
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          767: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          500: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        }
       });
       var galleryThumbs = new Swiper('[js-small-slider]', {
         direction: 'vertical',

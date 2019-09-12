@@ -98,11 +98,27 @@
       &:before
         content: '· '
 
+.catalog
+  .item-slider-product
+    margin-bottom: 40px
+
 @include media-breakpoint-down(md)
   .catalog-menu, .catalog-menu-wrap
     width: 100%
   .catalog-menu-wrap
     margin-bottom: 20px
+  .catalog-menu-toggle
+    display: inline-flex
+    font-size: 20px
+    transform: rotate(-90deg)
+    margin-bottom: 10px
+    font-weight: 500
+    &.open
+      transform: rotate(90deg)
+  .catalog-menu-wrap
+    display: none
+    &.open
+      display: block
 
 @include media-breakpoint-down(sm)
   .catalog .item-slider-product
@@ -110,3 +126,9 @@
   .catalog-wrap
     padding-left: 20px
     padding-right: 20px
+  .catalog-text-area
+    font-size: 14px
+
+@include media-breakpoint-up(lg)
+  .catalog-menu-toggle
+    display: none

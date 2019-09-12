@@ -2,7 +2,7 @@ ProjectTitle: Street Fashion
 
 PageList:
   - file: homepage.html
-    ready: 50
+    ready: 90
   - file: catalog.html
     ready: 50
   - file: card-product.html

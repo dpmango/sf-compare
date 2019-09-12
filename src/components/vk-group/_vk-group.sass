@@ -1,0 +1,34 @@
+.bg-vk-group
+  background-image: url("../img/bg-vk.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50%
+
+.vk-group-api
+  width: 421px
+
+.vk-group
+  color: #fff
+  &__title
+    font-weight: 500
+    font-size: 36px
+    line-height: 120%
+    letter-spacing: 0.03em
+    margin-bottom: 30px
+  &__subtitle
+    font-weight: 300
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.03em
+
+#vk_widget
+  #vk_groups
+    width: 100% !important
+
+@include media-breakpoint-down(sm)
+  .vk-group__title
+    font-size: 24px
+
+@include media-breakpoint-down(xs)
+  .vk-group
+    margin-bottom: 20px

@@ -1,0 +1,75 @@
+.new-arrival-tab-link
+  display: flex
+  li
+    margin-right: 100px
+    &:last-child
+      margin-right: 0
+    &.active
+      button
+        color: #141414
+        &:before
+          width: 15px
+          height: 15px
+    button
+      position: relative
+      transform: translateY(-100%)
+      bottom: 15px
+      padding: 0
+      background: none
+      font-weight: 500
+      font-size: 24px
+      color: #909090
+      line-height: 115.3%
+      letter-spacing: 0.01em
+      transition: color $delay
+      &:before
+        content: ''
+        position: absolute
+        pointer-events: none
+        top: calc(100% + 20px)
+        left: 50%
+        transform: translateX(-50%)
+        width: 0px
+        height: 0px
+        border-radius: 50%
+        background-color: #0b0b0b
+        transition: width $delay, height $delay
+      &:hover
+        color: #141414
+
+.new-arrival-slider
+  padding-bottom: 57px
+  .swiper-slide
+    width: 251px
+    margin-right: 65px
+    &:last-child
+      margin-right: 0
+
+.new-arrival-wrap-tabs
+  position: relative
+
+.new-arrival-tab
+  position: absolute
+  width: 100%
+  visibility: hidden
+  opacity: 0
+  top: 0
+  left: 0
+  &_active
+    position: relative
+    visibility: visible
+    opacity: 1
+    transition: opacity $delay
+
+@include media-breakpoint-down(md)
+  .new-arrival-tab-link li
+    margin-right: 50px
+
+@include media-breakpoint-down(sm)
+  .new-arrival-tab-link
+    margin-bottom: 20px
+    li button
+      bottom: -27px
+      font-size: 20px
+  .new-arrival-tab-link li button:before
+    top: calc(100% + 5px)

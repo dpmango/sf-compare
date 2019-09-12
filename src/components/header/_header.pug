@@ -1,0 +1,272 @@
+header.header
+  .container
+    .row.header-desktop
+      .col-12.wrap-header
+        ul.header-menu
+          li
+            a#men(href="#") Мужское
+          li
+            a#women(href="#") Женское
+          li
+            a(href="#")
+              +svgMono("search")
+          li
+            a(href="#")
+              +svgMono("vk")
+          li
+            a(href="#")
+              +svgMono("inst")
+        a.header-logo(href="#")
+          +svgMono("logo")
+        ul.header-info
+          li.header-info__address
+            a(href="#") Адрес магазина
+          li
+            a(href="tel:8 495 311 25 35") 8 495 311 25 35
+          li
+            a(href="#")
+              +svgMono("ico_human")
+          li.header-info__basket
+            a(href="#")
+              +svgMono("basket")
+              span 2
+      .wrap-drop-menu.close.men
+        .container
+          .row
+            .col-4
+              .wrap-drop-menu__tilte Одежда
+              .row
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Брюки
+                    li
+                      a(href="#") Джинсы / Штаны
+                    li
+                      a(href="#") Жилетки
+                    li
+                      a(href="#") Классические костюмы
+                    li
+                      a(href="#") Кофты / Толстовки
+                    li
+                      a(href="#") Куртки
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Пиджаки
+                    li
+                      a(href="#") Пуховики / Парки
+                    li
+                      a(href="#") Рубашки
+                    li
+                      a(href="#") Спортивные костюмы
+                    li
+                      a(href="#") Футболки / Поло
+                    li
+                      a(href="#") Шорты
+            .col-4
+              .wrap-drop-menu__tilte Обувь
+              .row
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки
+      .wrap-drop-menu.close.women
+        .container
+          .row
+            .col-4
+              .wrap-drop-menu__tilte Одежда
+              .row
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Брюки
+                    li
+                      a(href="#") Джинсы / Штаны
+                    li
+                      a(href="#") Жилетки
+                    li
+                      a(href="#") Классические костюмы
+                    li
+                      a(href="#") Кофты / Толстовки
+                    li
+                      a(href="#") Куртки
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Пиджаки
+                    li
+                      a(href="#") Пуховики / Парки
+                    li
+                      a(href="#") Рубашки
+                    li
+                      a(href="#") Спортивные костюмы
+                    li
+                      a(href="#") Футболки / Поло
+                    li
+                      a(href="#") Шорты
+            .col-4
+              .wrap-drop-menu__tilte Обувь
+              .row
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки
+                .col-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки
+    .row.align-items-center.header-mob
+      .col-12
+        .row.align-items-center.justify-content-between
+          .col-auto
+            a.logo(href="#")
+              +svgMono("logo_mob")
+          .col-auto
+            ul.header-soc
+              li
+                a(href="#")
+                  +svgMono("vk")
+              li
+                a(href="#")
+                  +svgMono("inst")
+          .col-auto
+            .df-ic
+              .header-basket
+                a(href="#")
+                  +svgMono("basket")
+                  span 2
+              .burger
+                div
+                div
+                div
+      .col-12
+        .row.no-gutters.align-items-center.justify-content-between
+          .col-auto
+            a.header-tel(href="tel:8 495 311 25 35") 8 495 311 25 35
+          .col-auto
+            a.header-address(href="#") Адрес магазина
+      .menu-mob
+        .container
+          .row
+            .col-12
+              .menu-mob__title Мужское
+            .col-6
+              .wrap-drop-menu__tilte Одежда
+              .row
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Брюки
+                    li
+                      a(href="#") Джинсы / Штаны
+                    li
+                      a(href="#") Жилетки
+                    li
+                      a(href="#") Классические костюмы
+                    li
+                      a(href="#") Кофты / Толстовки
+                    li
+                      a(href="#") Куртки
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Пиджаки
+                    li
+                      a(href="#") Пуховики / Парки
+                    li
+                      a(href="#") Рубашки
+                    li
+                      a(href="#") Спортивные костюмы
+                    li
+                      a(href="#") Футболки / Поло
+                    li
+                      a(href="#") Шорты
+            .col-6
+              .wrap-drop-menu__tilte Обувь
+              .row
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки
+          .row
+            .col-12
+              .menu-mob__title Женское
+            .col-6
+              .wrap-drop-menu__tilte Одежда
+              .row
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Брюки
+                    li
+                      a(href="#") Джинсы / Штаны
+                    li
+                      a(href="#") Жилетки
+                    li
+                      a(href="#") Классические костюмы
+                    li
+                      a(href="#") Кофты / Толстовки
+                    li
+                      a(href="#") Куртки
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Пиджаки
+                    li
+                      a(href="#") Пуховики / Парки
+                    li
+                      a(href="#") Рубашки
+                    li
+                      a(href="#") Спортивные костюмы
+                    li
+                      a(href="#") Футболки / Поло
+                    li
+                      a(href="#") Шорты
+            .col-6
+              .wrap-drop-menu__tilte Обувь
+              .row
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки
+                .col-sm-6
+                  ul.wrap-drop-menu__list
+                    li
+                      a(href="#") Кроссовки / Кеды
+                    li
+                      a(href="#") Мокасины
+                    li
+                      a(href="#") Сланцы
+                    li
+                      a(href="#") Туфли / Ботинки

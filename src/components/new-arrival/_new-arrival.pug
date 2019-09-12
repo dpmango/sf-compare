@@ -1,0 +1,49 @@
+section.indent-tb100
+  .container
+    .row
+      .col-12
+        h2.h2-title.title-bdb Новые поступления
+    .row.justify-content-end
+      .col-auto
+        ul.new-arrival-tab-link
+          li.active
+            button Мужское
+          li
+            button Женское
+    .row.indent-t20
+      .col-12
+        .new-arrival-wrap-tabs
+          .new-arrival-tab.new-arrival-tab_active
+            .swiper-container.new-arrival-slider(js-slider)
+              .swiper-wrapper
+                .swiper-slide
+                  +item-slider-product("jeans1", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans2", "Джинсы Мужские зауженные", "S495", "2950 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans3", "Джинсы Мужские зауженные", "S495", "1500 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans4", "Джинсы Мужские зауженные", "S495", "3100 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans1", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans2", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+              .swiper-pagination
+          .new-arrival-tab
+            .swiper-container.new-arrival-slider(js-slider)
+              .swiper-wrapper
+                .swiper-slide
+                  +item-slider-product("jeans3", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans1", "Джинсы Мужские зауженные", "S495", "2950 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans4", "Джинсы Мужские зауженные", "S495", "1500 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans2", "Джинсы Мужские зауженные", "S495", "3100 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans1", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans2", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+                .swiper-slide
+                  +item-slider-product("jeans3", "Джинсы Мужские зауженные", "S495", "2350 ₽")
+              .swiper-pagination

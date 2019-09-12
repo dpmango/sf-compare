@@ -1,0 +1,29 @@
+.breadcrumbs
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding-top: 13px
+  padding-bottom: 16px
+  li
+    margin-left: 5px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      &:after
+        display: none
+      a
+        color: #0B0B0B
+    &:nth-last-child(2)
+      &:after
+        color: #0B0B0B
+    &:after
+      content: ' —'
+      color: #909090
+    a
+      font-size: 14px
+      line-height: 16px
+      letter-spacing: 0.03em
+      color: #909090
+      transition: color $delay
+      &:hover
+        color: #0b0b0b

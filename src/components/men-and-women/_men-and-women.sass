@@ -1,0 +1,74 @@
+.men-and-women
+  position: relative
+  display: flex
+  width: 100%
+  height: 895px
+  overflow: hidden
+  // padding-bottom: 124.31%
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50%
+  transition: transform $delay
+  &:hover
+    transform: scale(1.1)
+  span
+    position: absolute
+    top: 80px
+    font-size: 45px
+    font-weight: 500
+    line-height: 53px
+    letter-spacing: 0.03em
+    &:before
+      content: ''
+      position: absolute
+      top: -5px
+      width: 305px
+      height: 1px
+      background-color: #0B0B0B
+  &.l
+    span
+      left: 116px
+      &:before
+        left: 3px
+  &.r
+    span
+      right: 116px
+      &:before
+        right: 3px
+
+@include media-breakpoint-down(md)
+  .men-and-women
+    height: 560px
+    &.l
+      span
+        top: 30px
+        left: 35px
+    &.r
+      span
+        top: 30px
+        right: 35px
+
+@include media-breakpoint-down(sm)
+  .men-and-women
+    span
+      top: 40px
+      font-size: 35px
+      &:before
+        width: 205px
+
+@include media-breakpoint-down(xs)
+  .men-and-women
+    height: 320px
+    span
+      font-size: 20px
+      line-height: 1.2
+      &:before
+        display: none
+    &.l
+      span
+        top: 15px
+        left: 30px
+    &.r
+      span
+        top: 15px
+        right: 30px

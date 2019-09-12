@@ -1,0 +1,63 @@
+section.indent-t20.indent-b100
+  .container
+    .row.indent-b40
+      .col-12
+        h1.h1-title Джинсы Мужские зауженные
+    .row
+      .col-lg-6
+        .row.no-gutters
+          .col-3.col-sm-2
+            .swiper-container.card-product-small-slider(js-small-slider)
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/small-img1.jpg')")
+                .swiper-slide(style="background-image: url('img/small-img2.jpg')")
+          .col-9.col-sm-10
+            .swiper-container.card-product-big-slider(js-big-slider)
+              .swiper-wrapper
+                .swiper-slide(href="img/jeans-big1.jpg" data-fancybox style="background-image: url('img/jeans-big1.jpg')")
+                .swiper-slide(href="img/jeans-big2.jpg" data-fancybox style="background-image: url('img/jeans-big2.jpg')")
+      .col-lg-6
+        .card-product-info
+          .card-product-info__vendor-code Артикул: S778
+          .card-product-info__price 2 950 ₽
+          .card-product-info__small-text Выберите размер
+          .row.indent-b35
+            .col-auto
+              select(js-select)
+                option(value="26") 26
+                option(value="28") 28
+                option(value="30") 30
+            .col-auto
+              a.btn-black(href="#")
+                +svgMono("to_basket")
+                | Добавить в корзину
+            .col
+              .card-product-info__help
+                span Наши консультанты рады помочь
+                br
+                a(href="tel:8 495 311-25-35") 8 495 311-25-35
+          .card-product-info__small-text Рекомендуем ввести ваши размеры
+          .row.no-gutters
+            .col-auto
+              ul.card-product-info__input-list
+                li
+                  input(type="text" data-mask="0#")
+                li
+                  input(type="text" data-mask="0#")
+                li
+                  input(type="text" data-mask="0#")
+            .col-auto
+              .card-product-info__example
+                img(src="img/size-jeans.jpg", alt="")
+              .row.justify-content-center
+                .col-auto
+                  a.card-product-info__link(href="#") Описание по замеру джинсов\брюк
+          .row
+            .col
+              .card-product-info__indent
+          .row
+            .col
+              span.card-product-info__text
+                | Плащ-тренч выполнен из износостойкого смесового текстиля на основе хлопка. Модель полуприталенного кроя. В комплекте пояс с пряжкой. Детали: двубортная застежка на пуговицах, рукав втачной с патой, кокетки на спинке и правой полочке, воротник отложной на высокой стойке; 2 наружных кармана и 2 кармана внутренних; спинка со шлицей; принтованная шелковистая подкладка.
+                br
+                | Состав: Хлопок - 55%, Полиэстер - 45%

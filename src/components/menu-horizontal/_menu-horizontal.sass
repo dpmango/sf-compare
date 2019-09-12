@@ -1,0 +1,12 @@
+.menu-horizontal
+  background-color: #f3f3f3
+  .row
+    height: 50px
+  a
+    transition: color $delay
+    &:hover
+      color: #909090
+
+@include media-breakpoint-down(lg)
+  .menu-horizontal
+    display: none

@@ -1,0 +1,35 @@
+mixin category-image-item(img, name, price)
+  a.category-image-item(href="#")
+    .category-image-item__img(style="background-image: url('img/"+img+".jpg')")
+    .category-image-item__name!= name
+    .category-image-item__price!= price
+
+section.bg-grey.indent-tb50
+  .container
+    .row
+      .col-12
+        h2.h2-title.title-bdb Подберите подходящий образ
+        .suitable-image-subtitle Собери свой стиль вместе с 
+          span Fashion Street’s
+  .container.indent-t50.no-p
+    .row
+      .col-12
+        img.img-w100p(src="img/image.jpg", alt="")
+    .row.indent-t20
+      .col-md-6.align-self-center
+        .free-shipping
+          .free-shipping__title Бесплатная доставка при заказе на сумму
+          .free-shipping__price 2000 ₽
+          a.free-shipping__link(href="#") Подробнне о доставке и оплате
+      .col-md-6.indent-mob-t20
+        +category-image-item("image2", "Аксессуары", "От 450 ₽")
+    .row.indent-t20
+      .col-md-6
+        +category-image-item("image3", "Джинсы и брюки", "От 2350 ₽")
+      .col-md-6.indent-mob-t20
+        +category-image-item("image4", "Обувь", "От 900 ₽")
+    .row.indent-t20
+      .col-md-6
+        +category-image-item("image4", "Обувь", "От 900 ₽")
+      .col-md-6.indent-mob-t20
+        +category-image-item("image3", "Джинсы и брюки", "От 2350 ₽")

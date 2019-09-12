@@ -1,0 +1,262 @@
+.header
+  position: fixed
+  z-index: 50
+  width: 100%
+  background-color: #0B0B0B
+
+.header_list
+  list-style: none
+  display: flex
+  li
+    margin-right: 25px
+
+.wrap-header
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: #ffffff
+  height: 81px
+
+.header-menu
+  display: flex
+  align-items: center
+  font-weight: 500
+  li
+    margin-right: 25px
+    &:last-child
+      margin-right: 0
+    a
+      display: flex
+      transition: color $delay
+      .ico
+        &:hover
+          color: #909090
+      &.open
+        color: #909090
+  .ico-mono
+    &-search
+      width: 20px
+      height: 20px
+    &-vk
+      width: 27px
+      height: 27px
+    &-inst
+      width: 16px
+      height: 16px
+
+.header-info
+  display: flex
+  align-items: center
+  font-weight: 500
+  li
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+    a
+      transition: color $delay
+      &:hover
+        color: #909090
+  &__address
+    a
+      display: flex
+      padding: 5px 10px
+      background: rgba(255, 255, 255, 0.25)
+  .ico-mono
+    &-ico_human, &-basket
+      width: 16px
+      height: 16px
+  &__basket
+    position: relative
+    top: -2px
+    a
+      display: flex
+      span
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 3px
+        width: 16px
+        height: 16px
+        color: #000
+        font-weight: 600
+        font-size: 12px
+        line-height: 14px
+        border-radius: 50%
+        background-color: #fff
+
+.header-logo
+  display: flex
+  +vcenter
+  .ico-mono-logo
+    width: 100px
+    height: 50px
+
+.wrap-drop-menu
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  color: #fff
+  transition: opacity $delay
+  &.open
+    visibility: visible
+    opacity: 1
+  &.close
+    visibility: hidden
+    opacity: 0
+  .container
+    >.row
+      padding: 30px 20px
+      margin-right: -30px
+      margin-left: -30px
+      background-color: #0b0b0b
+  &__tilte
+    font-size: 21px
+    font-weight: 500
+    letter-spacing: 0.03em
+    line-height: 25px
+    margin-bottom: 20px
+  &__list
+    display: flex
+    flex-direction: column
+    li
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      a
+        font-size: 14px
+        line-height: 16px
+        transition: color $delay
+        &:hover
+          color: #909090
+
+.header-mob
+  display: none
+  color: #fff
+  height: 70px
+
+@include media-breakpoint-down(lg)
+  .header-info li
+    margin-right: 15px
+
+@include media-breakpoint-down(md)
+  .header-desktop
+    display: none
+  .header-mob
+    display: flex
+  .logo
+    display: flex
+    .ico-mono-logo_mob
+      width: 105px
+      height: 22px
+  .header-basket
+    position: relative
+    margin-right: 20px
+    a
+      display: flex
+      align-items: flex-end
+      .ico-mono-basket
+        width: 21px
+        height: 21px
+      span
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 3px
+        width: 16px
+        height: 16px
+        color: #000
+        font-weight: 600
+        font-size: 12px
+        line-height: 14px
+        border-radius: 50%
+        background-color: #fff
+  .burger
+    position: relative
+    cursor: pointer
+    width: 23px
+    height: 14px
+    &.open
+      div
+        &:nth-child(1)
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%) rotate(45deg)
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          top: 50%
+          left: 50%
+          bottom: auto
+          transform: translate(-50%, -50%) rotate(-45deg)
+    div
+      position: absolute
+      height: 2px
+      background-color: #fff
+      transition: transform $delay, top $delay, left $delay
+      &:nth-child(1)
+        width: 100%
+        top: 0
+        left: 0
+      &:nth-child(2)
+        width: 60%
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+      &:nth-child(3)
+        width: 100%
+        bottom: 0
+        left: 0
+  .header-address
+    display: flex
+    padding: 2px 5px
+    background-color: rgba(255, 255, 255, 0.25)
+  .header-soc
+    display: flex
+    align-items: center
+    margin-right: 22px
+    li
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
+      a
+        display: flex
+        transition: color $delay
+        &:hover
+          color: #909090
+    .ico-mono
+      &-vk
+        width: 24px
+        height: 24px
+      &-inst
+        width: 16px
+        height: 16px
+  .menu-mob
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    width: 100%
+    height: calc(100vh - 70px)
+    overflow: auto
+    top: 100%
+    left: 0
+    background-color: #0B0B0B
+    transition: opacity $delay
+    &.open
+      opacity: 1
+      visibility: visible
+    .container
+      >.row
+        padding-top: 20px
+        padding-bottom: 20px
+    &__title
+      font-size: 24px
+      font-weight: 600
+      margin-bottom: 10px
+  .wrap-drop-menu__list
+    margin-bottom: 20px
+
++r(374)
+  .header-soc
+    margin-right: 0

@@ -1,0 +1,30 @@
+- var svgSpriteMono = 'img/sprite-mono.svg'
+- var svgSpriteColor = 'img/sprite-color.svg'
+
+mixin svgMono(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class="ico ico-mono-" + name + modClass)
+    use(xlink:href= svgSpriteMono + '#ico-mono-' + name)
+      
+mixin svgColor(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class="ico ico-color-" + name + modClass)
+    use(xlink:href= svgSpriteColor + '#ico-color-' + name)
+
+mixin item-slider-product(img, title, vendor_code, price)
+  .item-slider-product
+    .item-slider-product__img(style="background-image: url('img/"+img+".jpg')")
+    a.item-slider-product__title(href="#")!= title
+    .row.no-gutters.justify-content-between.indent-b15
+      .col-auto.item-slider-product__text Артикул
+      .col-auto.item-slider-product__text!= vendor_code
+    .row.no-gutters.justify-content-between.align-items-center
+      .col-auto.item-slider-product__price!= price
+      a.col-auto.item-slider-product__basket(href="#")
+        +svgMono("to_basket")

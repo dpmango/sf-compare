@@ -1,0 +1,169 @@
+.basket-wrap
+  display: flex
+  justify-content: space-between
+
+.checkout
+  display: flex
+  flex-direction: column
+  padding: 40px 35px
+  flex-shrink: 0
+  width: 43.33333%
+  background-color: #f5f5f5
+  &__title
+    text-align: center
+    font-weight: 600
+    font-size: 24px
+    line-height: 29px
+    letter-spacing: 0.03em
+    color: #000
+    margin-bottom: 20px
+  &__wrap
+    display: flex
+    justify-content: space-between
+  &__half
+    width: calc(50% - 25px)
+  .input, .select
+    margin-bottom: 20px
+  &__indent
+    padding-top: 10px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+    margin-bottom: 20px
+  &__price
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: 0.03em
+    color: #000
+    margin-bottom: 20px
+  .btn-black
+    height: 60px
+    font-size: 24px
+    line-height: 29px
+    letter-spacing: 0.03em
+
+.wrap-products
+  width: 100%
+  margin-right: 50px
+
+.products
+  display: flex
+  flex-direction: column
+  &__item
+    display: flex
+    padding-bottom: 29px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+    margin-bottom: 27px
+  &__img
+    width: 90px
+    height: 120px
+    margin-right: 17px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50%
+  &__wrap-text
+    display: flex
+    flex-direction: column
+    font-weight: 500
+    letter-spacing: 0.03em
+  &__name
+    text-decoration: underline
+    color: #000
+    margin-bottom: 10px
+  &__price
+    color: #000
+    margin-bottom: 10px
+  &__size
+    font-size: 14px
+    line-height: 16px
+    color: #828282
+    margin-bottom: 6px
+  &__article
+    font-size: 14px
+    line-height: 16px
+    color: #828282
+  &__wrap-quantity
+    display: flex
+    align-items: center
+    margin-left: auto
+    margin-right: 85px
+  &__quantity
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 1px solid #909090
+    width: 100px
+    height: 40px
+    font-weight: 500
+    letter-spacing: 0.03em
+    user-select: none
+    .minus, .plus
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 0
+      cursor: pointer
+      width: 30px
+      height: 30px
+      font-size: 24px
+      color: #909090
+      transition: color $delay
+      &:hover
+        color: #000
+    .numb
+      color: #000
+  &__wrap-remove
+    display: flex
+    align-items: center
+    justify-content: center
+  &__remove
+    display: flex
+    cursor: pointer
+    &:hover
+      .ico
+        color: #000
+    .ico
+      width: 16px
+      height: 16px
+      color: #909090
+      transition: color $delay
+  &__wrap-checkout
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    .btn-black
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: 0.03em
+      height: 54px
+      padding-left: 25px
+      padding-right: 25px
+  &__total-amount
+    width: 100%
+    text-align: right
+    font-size: 18px
+    line-height: 21px
+    letter-spacing: 0.03em
+    color: #000
+    margin-bottom: 15px
+
+@include media-breakpoint-down(md)
+  .basket-wrap
+    flex-direction: column
+  .wrap-products
+    margin-right: 0
+  .checkout
+    margin-top: 20px
+    width: 100%
+
+@include media-breakpoint-down(xs)
+  .products__item
+    flex-wrap: wrap
+  .products__wrap-text
+    width: 60%
+  .products__img, .products__wrap-text
+    margin-bottom: 10px
+  .checkout
+    padding: 20px
+  .checkout__wrap
+    flex-wrap: wrap
+  .checkout__half
+    width: 100%

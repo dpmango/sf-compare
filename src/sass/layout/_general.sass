@@ -1,0 +1,253 @@
+*
+  box-sizing: border-box
+  outline: none
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+  li
+    display: inline-block
+
+body, html
+  background: white
+  color: $fontColor
+  font-family: $baseFont
+  // font-family: "Helvetica", -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Ubuntu', 'Cantarell', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+  font-size: 18px
+  line-height: 115.3%
+  min-width: 320px
+  max-width: 100%
+  margin: 0
+  // overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  overflow-x: hidden
+  &.fix
+    overflow: hidden
+
+::selection
+  color: white
+  background: $colorPrimary
+
+.body-lock
+  height: 100%
+  overflow: hidden
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  &__content
+    // used for sticky footer (flexbox way)
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+    // fixed container fix
+    padding-top: 81px
+
+@include media-breakpoint-down(md)
+  .page
+    &__content
+      padding-top: 70px
+
+// .container
+//   // max-width: calc(1200px + 80px)
+//   // width: 100%
+//   margin-left: auto
+//   margin-right: auto
+//   padding-left: 40px
+//   padding-right: 40px
+
+// +r($sm)
+//   .container
+//     padding-left: 20px
+//     padding-right: 20px
+
+.df-ic
+  display: flex
+  align-items: center
+
+.ovh
+  overflow: hidden
+
+.indent
+  &-tb
+    &130
+      padding-top: 130px
+      padding-bottom: 130px
+    &100
+      padding-top: 100px
+      padding-bottom: 100px
+    &85
+      padding-top: 85px
+      padding-bottom: 85px
+    &50
+      padding-top: 50px
+      padding-bottom: 50px
+  &-t
+    &100
+      padding-top: 100px
+    &60
+      padding-top: 60px
+    &50
+      padding-top: 50px
+    &24
+      padding-top: 24px
+    &20
+      padding-top: 20px
+  &-b
+    &120
+      padding-bottom: 120px
+    &100
+      padding-bottom: 100px
+    &50
+      padding-bottom: 50px
+    &40
+      padding-bottom: 40px
+    &35
+      padding-bottom: 35px
+    &30
+      padding-bottom: 30px
+    &20
+      padding-bottom: 20px
+    &15
+      padding-bottom: 15px
+
+@include media-breakpoint-down(sm)
+  .indent
+    &-tb
+      &130
+        padding-top: 100px
+        padding-bottom: 100px
+      &100
+        padding-top: 70px
+        padding-bottom: 70px
+      &85
+        padding-top: 50px
+        padding-bottom: 50px
+
+@include media-breakpoint-down(xs)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+  .indent
+    &-tb
+      &130
+        padding-top: 70px
+        padding-bottom: 70px
+      &100
+        padding-top: 50px
+        padding-bottom: 50px
+
+.title-bdb
+  padding-bottom: 15px
+  border-bottom: 1px solid #0B0B0B
+
+.title-bdb2
+  padding-bottom: 20px
+  border-bottom: 1px solid #909090
+
+.bg-grey
+  background-color: #f3f3f3
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+.img-w100p
+  display: block
+  width: 100%
+
+.swiper-pagination
+  position: absolute
+  display: flex
+  z-index: 1
+  left: 50%
+  bottom: 0px
+  transform: translateX(-50%)
+  .swiper-pagination-bullet
+    cursor: pointer
+    width: 15px
+    height: 15px
+    margin-right: 20px
+    border-radius: 50%
+    background-color: #e8e8e8
+    transition: background-color $delay
+    &:last-child
+      margin-right: 0
+    &-active, &:hover
+      background-color: #0b0b0b
+
+.item-slider-product
+  padding-bottom: 10px
+  border-bottom: 1px solid #909090
+  &__img
+    width: 100%
+    height: 400px
+    margin-bottom: 12px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50%
+  &__title
+    display: block
+    font-weight: 500
+    line-height: 115.3%
+    letter-spacing: 0.01em
+    margin-bottom: 8px
+    transition: color $delay
+    &:hover
+      color: #909090
+  &__text
+    font-size: 14px
+    line-height: 115.3%
+    color: #909090
+  &__basket
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #0b0b0b
+    transition: background-color $delay
+    &:hover
+      background-color: #909090
+    .ico-mono-to_basket
+      width: 21px
+      height: 21px
+      color: #fff
+  &__price
+    font-weight: 500
+    font-size: 24px
+    line-height: 115.3%
+    letter-spacing: 0.01em
+
+@include media-breakpoint-down(xs)
+  .new-arrival-slider .swiper-slide
+    margin-right: 30px !important
+
+// REMOVE FOR PRODUCTION !
+.dev-bp-debug
+  background: black
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 9999
+  color: white
+  padding: 5px
+  font-size: 12px
+  border-bottom-left-radius: 5px

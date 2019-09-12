@@ -1,0 +1,83 @@
+section.indent-t20.indent-b100
+  .container
+    .row.indent-b30
+      .col-12
+        h1.h1-title Корзина
+    .row
+      .col
+        form.basket-wrap
+          .wrap-products
+            .products
+              .products__item
+                .products__img(style="background-image: url('img/small-img3.jpg')")
+                .products__wrap-text
+                  .products__name Мужская куртка
+                  .products__price 3 200 ₽
+                  .products__size Размер: 28
+                  .products__article Артикул: S876
+                .products__wrap-quantity
+                  .products__quantity
+                    span.minus -
+                    span.numb 5
+                    span.plus +
+                .products__wrap-remove
+                  .products__remove
+                    +svgMono("cross")
+              .products__item
+                .products__img(style="background-image: url('img/small-img1.jpg')")
+                .products__wrap-text
+                  .products__name Джинсы Мужские зауженные
+                  .products__price 1 800 ₽
+                  .products__size Размер: 28
+                  .products__article Артикул: S876
+                .products__wrap-quantity
+                  .products__quantity
+                    span.minus -
+                    span.numb 98
+                    span.plus +
+                .products__wrap-remove
+                  .products__remove
+                    +svgMono("cross")
+              .products__wrap-checkout
+                .products__total-amount Общая сумма: 
+                  b 5 000 ₽
+                button.btn-black(type="submit") Оформить заказ
+          .checkout
+            .checkout__title Оформление заказа
+            .input
+              label Имя
+              input(type="text")
+            .checkout__wrap
+              .checkout__half
+                .input
+                  label Телефон
+                  input(type="text")
+              .checkout__half
+                .input
+                  label Email
+                  input(type="text")
+            .input
+              label Город
+              input(type="text")
+            .input
+              label Адрес
+              input(type="text")
+            .input
+              label Комментарий
+              textarea
+            .checkout__indent
+            .select
+              label Способ доставки
+              select(js-select)
+                option(value="") Доставка курьером - 200 ₽
+                option(value="" selected) Доставка курьером - 500 ₽
+                option(value="") Доставка курьером - 1000 ₽
+            .select
+              label Способ оплаты
+              select(js-select)
+                option(value="" selected) Наличные курьеру
+                option(value="") Картой
+            .checkout__indent
+            .checkout__price Итого с доставкой: 
+              b 5 500 ₽
+            button.btn-black(type="submit") Оформить заказ

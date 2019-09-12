@@ -1,0 +1,22 @@
+section.bg-vk-group.indent-tb130
+  .container
+    .row
+      .col-sm-6.order-last.order-sm-first
+        #vk_widget
+          #vk_groups
+        script(type="text/javascript" src="//vk.com/js/api/openapi.js?162")
+        script.
+          function VK_Widget_Init(){
+          document.getElementById('vk_groups').innerHTML = "";
+          var vk_width = document.getElementById('vk_widget').clientWidth;
+          VK.Widgets.Group("vk_groups", {mode: 4, width: 'auto', height: "505", color3: "2B2B2B",}, 142243015);
+          };
+          window.addEventListener('load', VK_Widget_Init, false);
+          window.addEventListener('resize', VK_Widget_Init, false);
+      .col-sm-6.order-first.order-sm-last.align-self-center
+        .vk-group
+          .vk-group__title Следите за всеми обновлениями в нашей группе «Вконтакте»
+          .vk-group__subtitle
+            | Получайте информацию о новых поступлениях первыми.
+            br
+            | Учавствуйте в розыгрышах призов и приглашайте своих друзей.

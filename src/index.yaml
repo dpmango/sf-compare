@@ -1,0 +1,11 @@
+ProjectTitle: Street Fashion
+
+PageList:
+  - file: homepage.html
+    ready: 50
+  - file: catalog.html
+    ready: 50
+  - file: card-product.html
+    ready: 50
+  - file: basket.html
+    ready: 50
